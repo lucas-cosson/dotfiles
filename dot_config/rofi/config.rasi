@@ -1,0 +1,15 @@
+configuration {
+    font:                           "Iosevka Nerd Font 10";
+    sidebar-mode:                   true;
+    modi:                           "drun,calc";
+    combi-modi:                     "drun";
+    show-icons:                     true;
+    icon-theme:                     "Papirus";
+    display-drun:                   "";
+    display-calc:                   "";
+    terminal:                       "kitty";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+}
+
+@theme "evox_neo"

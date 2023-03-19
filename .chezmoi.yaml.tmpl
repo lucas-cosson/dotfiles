@@ -1,0 +1,10 @@
+{{ $email := promptString "What is your email ?" -}}
+{{ $headless := promptBool "Does this machine haven't a GUI" false}}
+
+data:
+    email: {{ $email | quote }}
+    headless: {{ $headless }}
+
+encryption: "gpg"
+format: "yaml"
+progress: true
