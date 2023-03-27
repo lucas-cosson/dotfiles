@@ -1,10 +1,14 @@
-{{ $email := promptString "What is your email ?" -}}
-{{ $headless := promptBool "Does this machine haven't a GUI" false}}
-
-data:
-    email: {{ $email | quote }}
-    headless: {{ $headless }}
+{{- $email := promptStringOnce . "email" "What is your email" -}}
+{{- $git_name := promptStringOnce . "git_name" "What is your git name" -}}
+{{- $git_email := promptStringOnce . "git_email" "What is your git email" $email -}}
+{{- $headless := promptBool "Does this machine have a GUI" false -}}
 
 encryption: "gpg"
 format: "yaml"
 progress: true
+
+data:
+    email: {{ $email | quote }}
+    git_name: {{ $git_name | quote }}
+    git_email: {{ $git_email | quote }}
+    headless: {{ not $headless }}
