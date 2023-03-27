@@ -12,4 +12,4 @@ configuration {
     disable-history:                false;
 }
 
-@theme "evox_neo"
+@theme "archneo"
