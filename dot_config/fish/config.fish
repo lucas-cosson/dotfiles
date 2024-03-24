@@ -1,6 +1,6 @@
 fish_add_path /usr/local/go/bin
 fish_add_path "$HOME/.cargo/bin"
-fish_add_path "$VOLTA_HOME/bin"
+source "$HOME/.asdf/asdf.fish"
 
 if status --is-login
     if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
@@ -17,10 +17,10 @@ alias ls "ls --color=auto"
 alias cf "nvim ~/.config/fish/config.fish"
 alias sf "source ~/.config/fish/config.fish"
 alias vim nvim
+alias gc "pnpx czg"
 # alias end
 
 # env
-set -gx VOLTA_HOME "$HOME/.volta"
 set -gx EDITOR "code -nw"
 set -gx GPG_TTY (tty)
 # env end
